@@ -1,7 +1,7 @@
 # arduino-humidity-fan-switch
 Humidity fan switch that starts/stops fan based on a regulable humidity setpoint, the system also logs in a SD card.
 
-# device overview
+# Device overview
 ![Top view](./images/top_view.png)
 
 ## List of materials
