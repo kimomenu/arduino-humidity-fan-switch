@@ -6,14 +6,14 @@ Humidity fan switch that starts/stops fan based on a regulable humidity setpoint
 
 ## List of materials
 Link to store:
-* [Arduino Uno](https://store-usa.arduino.cc/products/arduino-uno-rev3?selectedStore=us)
-* SD card shield - Adafruit PID 1141
+* [Arduino Uno](https://store-usa.arduino.cc/products/arduino-uno-rev3?selectedStore=us) ( mine is 10 years old)
+* SD card shield - Adafruit 1141 (mine is v1 version 10 years old)
 * [Enclosure](https://www.digikey.com/en/products/detail/bud-industries/PN-1336-DGMB/4897006)
 * [Enclosure back plate](https://www.digikey.com/en/products/detail/bud-industries/NBX-10984-PL/2057387)
-* LCD screen - Adafruit PID 292
-* I2C LCD controller - Adafruit PID 292
-* Humidity Sensor - Adafruit PID 5181
-* Front panel buttons - Adafruit PID 1490
+* LCD screen - Adafruit 292
+* I2C LCD controller - Adafruit 292
+* Humidity Sensor - Adafruit 5181
+* Front panel buttons - Adafruit 1490
 * [Fron panel LED](https://www.digikey.com/en/products/detail/lumex-opto-components-inc/SSI-LXH312GD-150/145100)
 * [Cable glands](https://www.digikey.com/en/products/detail/bud-industries/IPG-2227/5291485)
 
