@@ -2,7 +2,7 @@
 Humidity fan switch that starts/stops fan based on a regulable humidity setpoint, the system also logs in a SD card.
 
 # Device overview
-![Top view](./images/top_view.png)
+![Top view](./images/IMG_1478.jpeg)
 
 ## List of materials
 Link to store:
@@ -26,6 +26,6 @@ Other materials:
 
 ## Arduino code dependencies
 List of libraries you have to install in Arduino IDE to run the code:
-* Adafruit RTC Lib
+* Adafruit RTCLib
 * Adafruit LiquidCrystal
 * Adafruit AHTX0
