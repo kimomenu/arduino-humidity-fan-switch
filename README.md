@@ -10,6 +10,13 @@ Using the front panel buttons to:
 * Up increases the % humidity setpoint
 * Up increases the % humidity setpoint
 
+|    Humidity controller |
+| -------- | ------- |
+| Actuator  | Fan    |
+| Process value | Humidity     |
+| Setpoint    | adjustable wih button 0-100%    |
+| Action    | Direct - humidity increase turns fan on   |
+
 # Device overview
 ![Top view](./images/IMG_1478.jpeg)
 
