@@ -40,5 +40,8 @@ List of libraries you have to install in Arduino IDE to run the code:
 * Adafruit AHTX0
 
 ## Image gallery
-![Image 1](./images/IMG_1481.jpeg){: style="height:83px"}
-![Image 2](./images/IMG_1482.jpeg){: style="height:83px"}
+Back of the front plate
+![Image 1](./images/IMG_1481.jpeg)
+
+Microcontroller with SD card shield
+![Image 2](./images/IMG_1482.jpeg)
