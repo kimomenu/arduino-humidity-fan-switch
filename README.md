@@ -6,8 +6,8 @@ Humidity fan switch that starts/stops fan based on a regulable humidity setpoint
 
 ## List of materials
 Link to store:
-> Arduino Uno
-> SD card shield
+> * Arduino Uno
+> * SD card shield
 > Enclosure
 > Enclosure back plate
 > LCD screen
