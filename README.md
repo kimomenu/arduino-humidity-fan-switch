@@ -10,7 +10,7 @@ Using the front panel buttons to:
 * Up increases the % humidity setpoint
 * Up increases the % humidity setpoint
 
-|    Humidity controller |
+|    Humidity controller| |
 | -------- | ------- |
 | Actuator  | Fan    |
 | Process value | Humidity     |
