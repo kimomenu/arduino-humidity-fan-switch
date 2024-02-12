@@ -146,9 +146,9 @@ void setup(void)
 #endif  //ECHO_TO_SERIAL
   }
   
-  logfile.println("millis,stamp,datetime,light,temp,vcc");    
+  logfile.println("millis,stamp,datetime,temp,humidity,voltage,fan");    
 #if ECHO_TO_SERIAL
-  Serial.println("millis,stamp,datetime,light,temp,vcc");
+  Serial.println("millis,stamp,datetime,temp,humidity,voltage,fan");
 #endif //ECHO_TO_SERIAL
  
   // If you want to set the aref to something other than 5v
@@ -249,26 +249,12 @@ void loop(void)
   Serial.print(supplyvoltage);
 #endif // ECHO_TO_SERIAL
 
-  logfile.println();
-#if ECHO_TO_SERIAL
-  Serial.println();
-#endif // ECHO_TO_SERIAL
-
   digitalWrite(greenLEDpin, LOW);
 
   upbuttonState = digitalRead(upbuttonPin);
   downbuttonState = digitalRead(downbuttonPin);
 
-  // Now we write data to disk! Don't sync too often - requires 2048 bytes of I/O to SD card
-  // which uses a bunch of power and takes time
-  if ((millis() - syncTime) < SYNC_INTERVAL) return;
-  syncTime = millis();
   
-  // blink LED to show we are syncing data to the card & updating FAT!
-  digitalWrite(redLEDpin, HIGH);
-  logfile.flush();
-  digitalWrite(redLEDpin, LOW);
-
   // lcd configuration
   lcd.setCursor(0, 0);
   // print the number of seconds since reset:
@@ -314,6 +300,15 @@ void loop(void)
     timer=0   ;
   }
 
+  // Now we write data to disk! Don't sync too often - requires 2048 bytes of I/O to SD card
+  // which uses a bunch of power and takes time
+  if ((millis() - syncTime) < SYNC_INTERVAL) return;
+  syncTime = millis();
+  
+  // blink LED to show we are syncing data to the card & updating FAT!
+  digitalWrite(redLEDpin, HIGH);
+  logfile.flush();
+  digitalWrite(redLEDpin, LOW);
 
   delay(2000);
 
