@@ -52,3 +52,9 @@ Back of the front plate
 
 Microcontroller with SD card shield
 ![Image 2](./images/IMG_1482.jpeg)
+
+LCD screen views
+* Line 1: Temperature [deg C] and  Humidity [%] readings
+* Line 2: Setpoint / Date and time
+![Image 3](./images/IMG_1524.jpeg)
+![Image 4](./images/IMG_1525.jpeg)
