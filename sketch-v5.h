@@ -302,6 +302,7 @@ void loop(void)
   if (hum_setpoint<humidityReading && timer>relay_delay) { // turn on led 
     digitalWrite(fanPin, HIGH);
     digitalWrite(relayPin, HIGH);
+    logfile.print(", fan on ");
     
     timer=0;
     
@@ -309,6 +310,7 @@ void loop(void)
   else if(hum_setpoint>=humidityReading && timer>relay_delay) { //turn off led
     digitalWrite(fanPin, LOW);
     digitalWrite(relayPin, LOW);
+    logfile.print(", fan off ");
     timer=0   ;
   }
 
