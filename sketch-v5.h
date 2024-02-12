@@ -17,6 +17,7 @@ int hum_setpoint = 50;  // variable counting button pulses up and down as setpoi
 int mult = 5; // multiplier for setpoint
 int timer = 0; // timer variable to count seconds between start and end
 const int relay_delay = 30; // time between a start and a stop in cycles
+int fanStatus=0;// fan status 0 off and 1  on
 
 
 //LCD initi
@@ -146,9 +147,9 @@ void setup(void)
 #endif  //ECHO_TO_SERIAL
   }
   
-  logfile.println("millis,stamp,datetime,temp,humidity,voltage,fan");    
+  logfile.println("millis,stamp,datetime,temp,humidity,timer,voltage,fan");    
 #if ECHO_TO_SERIAL
-  Serial.println("millis,stamp,datetime,temp,humidity,voltage,fan");
+  Serial.println("millis,stamp,datetime,temp,humidity,timer,voltage,fan");
 #endif //ECHO_TO_SERIAL
  
   // If you want to set the aref to something other than 5v
@@ -288,17 +289,29 @@ void loop(void)
   if (hum_setpoint<humidityReading && timer>relay_delay) { // turn on led 
     digitalWrite(fanPin, HIGH);
     digitalWrite(relayPin, HIGH);
-    logfile.print(", fan on ");
-    
     timer=0;
-    
+    fanStatus=1;
+
+
   }
   else if(hum_setpoint>=humidityReading && timer>relay_delay) { //turn off led
     digitalWrite(fanPin, LOW);
     digitalWrite(relayPin, LOW);
-    logfile.print(", fan off ");
-    timer=0   ;
+     timer=0   ;
+     fanStatus=0;   
+
+    
+
   }
+    
+    logfile.print(", ");
+    logfile.print(fanStatus);
+  #if ECHO_TO_SERIAL
+    Serial.print(", ");
+    Serial.print(fanStatus);      
+    Serial.println();
+  #endif // ECHO_TO_SERIAL
+
 
   // Now we write data to disk! Don't sync too often - requires 2048 bytes of I/O to SD card
   // which uses a bunch of power and takes time
